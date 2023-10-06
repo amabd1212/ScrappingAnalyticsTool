@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Search Frontend</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>LinkedIn Search</h1>
+    <div class="content">
+        <!-- Add a div to display messages -->
+        <div id="message-container"></div>
+        <form id="search-form">
+            <label for="location">Location (Skip if the scope is Global):</label>
+            <input type="text" id="location" name="location"><br><br>
+            
+            <label for="language">Language:</label>
+            <input type="text" id="language" name="language"><br><br>
+            
+            <label for="number">Number of Results:</label>
+            <input type="number" id="number" name="number"><br><br>
+            
+            <label for="search-for">Subject of Interest:</label>
+            <input type="text" id="search-for" name="search-for"><br><br>
+
+            <label for="search-term">Scope of Interest:</label>
+            <input type="text" id="search-term" name="search-term"><br><br>
+            <button type="submit" class="search-button">Search</button>
+        </form>
+        <button id="enrich-button" class="enrich-button" style="display: none;">Enrich</button>
+        <!-- Add a link to download the enriched data -->
+        <a id="enriched-data-link" href="#" style="display: none;">Download Enriched Data</a>
+        <div id="wait-time" style="display: none;"></div>
+    </div>
+    
+    <div id="results">
+        <!-- Display search results here -->
+    </div>
+    <!-- Update the CSV download link with an ID and href attribute -->
+    <div id="csv-download">
+        <p><a href="#" id="csv-link" style="display: none;">Download CSV</a></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
