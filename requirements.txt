@@ -2,3 +2,5 @@
 flask
 serpapi
 selenium
+google-search-results
+
