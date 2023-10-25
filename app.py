@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 import time
 
 
-app = Flask(__name__, template_folder='/Users/tnwuser/Documents/TNW/TNW/static')
+app = Flask(__name__, template_folder='/Users/tnwuser/Documents/TNW/TNW/templates')
 
 app.static_folder = 'static'
 
