@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template, send_file
 import json
-from serpapi import GoogleSearch
+import serpapi
 import csv
 import os  # Add this import
 from selenium import webdriver
@@ -75,7 +75,7 @@ def search():
         "num": number,
     }
 
-    search = GoogleSearch(params)
+    search = serpapi.GoogleSearch(params)
     results = search.get_dict()
     csv_file_path = 'output.csv'
 
