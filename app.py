@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 import time
 
 
-app = Flask(__name__, template_folder='/Users/tnwuser/Documents/TNW/TNW/templates')
+app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), 'templates'))
 
 app.static_folder = 'static'
 
@@ -192,4 +192,3 @@ def enrich_data():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-    app.run()
